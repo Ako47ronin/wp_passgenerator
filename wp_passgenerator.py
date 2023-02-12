@@ -81,3 +81,4 @@ try:
     print("Passwords generated and written to passwords.txt")
 except KeyboardInterrupt:
     print("\nProgram interrupted by user. Exiting.")
+    
