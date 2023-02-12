@@ -74,7 +74,7 @@ except KeyboardInterrupt:
     print("\nProgram interrupted by user. Exiting.")
 	
 try:
-    passwords = [wp_generate_password(length=random.randint(min_length, max_length), extra_special_chars=extra_special) for i in range(n)]
+    passwords = {wp_generate_password(length=random.randint(min_length, max_length), extra_special_chars=extra_special) for i in range(n)}
 
     with open("passwords.txt", "w") as f:
         for password in passwords:
