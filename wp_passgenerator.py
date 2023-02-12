@@ -70,7 +70,9 @@ try:
 except ValueError:
     print("Invalid input. Exiting program.")
     exit()
-
+except KeyboardInterrupt:
+    print("\nProgram interrupted by user. Exiting.")
+	
 try:
     passwords = [wp_generate_password(length=random.randint(min_length, max_length), extra_special_chars=extra_special) for i in range(n)]
 
@@ -81,4 +83,6 @@ try:
     print("Passwords generated and written to passwords.txt")
 except KeyboardInterrupt:
     print("\nProgram interrupted by user. Exiting.")
-    
+except:
+    exit()
+
